@@ -1,3 +1,4 @@
+#!/usr/bin/python3 
 import sys
 import socket
 import getopt
@@ -100,7 +101,10 @@ def client_handler(client_socket):
             # now we receive until we see a linefeed
             cmd_buffer = b""
             while b"\n" not in cmd_buffer:
-                cmd_buffer += client_socket.recv(1024)
+                try:
+                    cmd_buffer += client_socket.recv(1024)
+                except:
+                    print('Connection Closed')
             # send back the command output
             response = run_command(cmd_buffer)
             # send back the response
@@ -119,6 +123,7 @@ def server_loop():
     server.listen(5)
     while True:
         client_socket, addr = server.accept()
+        print(f"Connection received from {addr}")
         # Use Multi-Threading to handle client
         client_thread = threading.Thread(target=client_handler, args=(client_socket,))
         client_thread.start()
@@ -179,7 +184,8 @@ def main():
     # upload things, execute commands, and drop a shell back
     # depending on our command line options above
     if listen:
-        server_loop()
+       print(f"Listening on 0.0.0.0:{port}")
+       server_loop()
 
 if __name__ == '__main__':
     main()
