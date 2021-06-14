@@ -183,8 +183,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-'''
-TODO Convert the input send to the other node in bytes and convert the input received in bytes to string
-'''
