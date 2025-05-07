@@ -29,5 +29,5 @@ like uploading files on the victim machine, or executing Commands directly into 
 
 .Server side when a connection is received.
 
-![Alt text](/images/sakrre.png?raw=true "Sak1")
+![Alt text](/images/sakrre.png)
 
