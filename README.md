@@ -1,5 +1,5 @@
 # Swiss Army Knife
-Swiss Army Knife (SAK) is a simple reverse shell
+Swiss Army Knife (SAK) is a reverse shell
 with a small amount of functionalities
 like uploading files on the victim machine, or executing Commands directly into the victim's machine.
 
