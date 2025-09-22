@@ -13,7 +13,7 @@ like uploading files on the victim machine, or executing Commands directly into 
 ### Example
 .Running the SAK in listening mode --> victim pc is listening for incoming connections from all network interfaces.
 
-![Alt text](/images/1.jpeg)
+![Alt text](1.jpeg)
 
 .Running the SAK in the target mode (client) --> attacker pc connects to the server.
 
